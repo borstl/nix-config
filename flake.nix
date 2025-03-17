@@ -1,6 +1,10 @@
 {
   description ="Sebo Darwin system flake";
 
+  # NOTE before reinstalling System
+  # - be sure config-files are up-to-date and pushed: nix, neovim
+  # - export cold-turkey-blocker sites and application files
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin/master";
@@ -34,10 +38,12 @@
           "ffmpeg"
           "fzf"
           "git"
+          "lazygit"
           "mas"
           "neovim"
           "node"
           "oh-my-posh"
+          "pngpaste"
           "thefuck"
           "tmux"
           "zsh-autosuggestions"
