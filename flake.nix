@@ -150,7 +150,7 @@
       system.stateVersion = 6;
 
       # The platform the configuration will be used on.
-      nixpkgs.hostPlatform = "x86_64-darwin";
+      nixpkgs.hostPlatform = "aarch64-darwin";
 
       security.pam.services.sudo_local.touchIdAuth = true;
     };
