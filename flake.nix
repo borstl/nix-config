@@ -17,9 +17,10 @@
     configuration = { pkgs, config, ... }: {
       nixpkgs.config.allowUnfree = true;
 
-      # Packages to install manually:# Turbo Boost Switcher Pro:# - https://app.gumroad.com/d/9b8be0c0c08827474c16b46ca25f2cee
+      # Packages to install manually:
       # PyCharm Professional
       # IntelliJ IDEA Ultimate
+      # Cold-Turkey-Blocker
       # Micromanager Pro:# - https://vendors.paddle.com/download/product/6d5ecd31-628b-4d12-a672-9ab7e11c708e
       # Writer Pro:# - https://vendors.paddle.com/download/product/601195
       # fzf-git:# - git clone https://github.com/junegunn/fzf-git.sh.git
@@ -52,9 +53,9 @@
         ];
     	  casks =[
           "arc"
-          "cold-turkey-blocker"
           "docker"
           "ea"
+          "font-maple-mono" # beautiful, but has no nerd-fonts compatibility
           "forklift"
           "iterm2"
           "inkscape"
@@ -65,9 +66,12 @@
           "makemkv"
           "microsoft-edge"
           "microsoft-teams"
-          "mkvtoolnix"
+          "mkvtoolnix" # needs Rosetta2
           "obsidian"
+          "plex"
           "prusaslicer"
+          "postman"
+	        "raspberry-pi-imager"
           "raycast"
           "skim"
           "the-unarchiver"
@@ -80,6 +84,7 @@
           "Apple Developer"= 640199958;
           "Affinity Designer 2"= 1616831348;
           "Bitwarden"= 1352778147;
+          "CapCut" = 1500855883;
           "Compressor"= 424390742;
           "Darkroom"= 953286746;
           "eduVPN"= 1317704208;
@@ -104,6 +109,9 @@
         nerd-fonts.fira-code
       ];
 
+      # System defaults: 
+      # - https://macos-defaults.com/
+      # - https://nix-darwin.github.io/nix-darwin/manual/index.html
       system.defaults = {
         dock = {
           autohide = true;
@@ -116,31 +124,39 @@
       	  persistent-apps =[
       	    "/System/Applications/Launchpad.app"
       	    "/Applications/ForkLift.app"
-      	    "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
+            "Applications/Arc.app"
+      	    # "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
       	    "/System/Applications/Mail.app"
       	    "/System/Applications/Calendar.app"
       	    "/System/Applications/Reminders.app"
       	    "/Applications/Obsidian.app"
       	    "/Applications/PDF Expert.app"
+            "/Applications/iTerm.app"
       	    "/System/Applications/Music.app"
       	    "/System/Applications/System Settings.app"
           ];
       	  show-recents = false;
       	  showhidden = true;
         };
+        NSGlobalDomain = {
+          InitialKeyRepeat = 15;
+          KeyRepeat = 2;
+          ApplePressAndHoldEnabled = false;
+        };
           finder.FXPreferredViewStyle ="Column";
-          NSGlobalDomain.InitialKeyRepeat = 15;
-          NSGlobalDomain.KeyRepeat = 2;
           universalaccess.reduceMotion = true;
       };
-      system.keyboard.enableKeyMapping = true;
-      system.keyboard.remapCapsLockToEscape = true;
+      system.keyboard = {
+        enableKeyMapping = true;
+        remapCapsLockToEscape = true;
+      };
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
       # Enable alternative shell support in nix-darwin.
-      # programs.fish.enable = true;
+      programs.zsh.enable = true;
+      #programs.fish.enable = true;
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
