@@ -73,6 +73,7 @@
           "microsoft-edge"
           "microsoft-teams"
           "mkvtoolnix" # needs Rosetta2
+          "monitorcontrol"
           "obsidian"
           "plex"
           "prusaslicer"
