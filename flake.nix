@@ -4,6 +4,11 @@
   # NOTE before reinstalling System
   # - be sure config-files are up-to-date and pushed: nix, neovim
   # - export cold-turkey-blocker sites and application files
+  #
+  # To update nix:
+  # nix flake update
+  # To run config:
+  # nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/.config/nix#SebBook
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -17,6 +22,7 @@
     configuration = { pkgs, config, ... }: {
       nixpkgs.config.allowUnfree = true;
 
+      # NOTE
       # Packages to install manually:
       # PyCharm Professional
       # IntelliJ IDEA Ultimate
