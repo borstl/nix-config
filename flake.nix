@@ -34,43 +34,62 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = [
+          pkgs.bat
+          pkgs.bitwarden-cli
+          pkgs.eza
+          pkgs.fzf
+          pkgs.git
+          pkgs.lazygit
+          pkgs.mas
           pkgs.mkalias
+          pkgs.oh-my-posh
+          pkgs.pngpaste
+          pkgs.thefuck
+          pkgs.typst
+          pkgs.typst
+          pkgs.zsh-autosuggestions
+          pkgs.zsh-syntax-highlighting
+          pkgs.zoxide
         ];
 
       homebrew ={
         enable = true;
       	brews =[
-          "bat"
-          "eza"
+          # "bat"
+          # "bitwarden-cli"
+          # "eza"
           "ffmpeg"
-          "fzf"
-          "git"
-          "lazygit"
-          "mas"
-          "neovim"
+          # "fzf"
+          # "git"
+          # "lazygit"
+          # "mas"
+          # "neovim"
           "node"
-          "oh-my-posh"
-          "pngpaste"
-          "thefuck"
-          "tmux"
-          "zsh-autosuggestions"
-          "zsh-syntax-highlighting"
-          "zoxide"
+          # "oh-my-posh"
+          # "pngpaste"
+          # "thefuck"
+          # "tmux"
+          # "zsh-autosuggestions"
+          # "zsh-syntax-highlighting"
+          # "zoxide"
         ];
     	  casks =[
           "arc"
           "docker"
-          "ea"
+          "cleanmymac"
+          # "ea"
           "font-maple-mono" # beautiful, but has no nerd-fonts compatibility
           "forklift"
           "iterm2"
           "inkscape"
           "inkstitch"
           "jetbrains-toolbox"
+          "karabiner-elements"
+          "lookaway"
           "logi-options+"
           "mactex"
           "makemkv"
-          "microsoft-edge"
+          # "microsoft-edge"
           "microsoft-teams"
           "mkvtoolnix" # needs Rosetta2
           "monitorcontrol"
@@ -94,6 +113,7 @@
           "CapCut" = 1500855883;
           "Compressor"= 424390742;
           "Darkroom"= 953286746;
+          "DevCleaner for Xcode" = 1388020431;
           "eduVPN"= 1317704208;
           "Final Cut Pro"= 424389933;
           "Infuse"= 1136220934;
@@ -137,7 +157,7 @@
       	    "/System/Applications/Calendar.app"
       	    "/System/Applications/Reminders.app"
       	    "/Applications/Obsidian.app"
-      	    "/Applications/PDF Expert.app"
+            "/Applications/Zotero.app"
             "/Applications/iTerm.app"
       	    "/System/Applications/Music.app"
       	    "/System/Applications/System Settings.app"
