@@ -37,15 +37,22 @@
           pkgs.bat
           # pkgs.bitwarden-cli
           pkgs.eza
+          pkgs.fd
           pkgs.fzf
           pkgs.git
+          pkgs.go
+          pkgs.lua
           pkgs.lazygit
+          pkgs.luarocks
           pkgs.mas
           pkgs.mkalias
           pkgs.neovim
           pkgs.oh-my-posh
+          pkgs.php
           pkgs.pngpaste
+          pkgs.ripgrep
           pkgs.thefuck
+          pkgs.tree-sitter
           pkgs.typst
           pkgs.wget
           # pkgs.zsh-autosuggestions
@@ -59,7 +66,10 @@
           # "bat"
           "bitwarden-cli"
           "ffmpeg"
+          "java"
+          "julia"
           "node"
+          "rust"
           "zsh-autosuggestions"
           "zsh-syntax-highlighting"
         ];
