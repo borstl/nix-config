@@ -35,20 +35,21 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages = [
           pkgs.bat
-          pkgs.bitwarden-cli
+          # pkgs.bitwarden-cli
           pkgs.eza
           pkgs.fzf
           pkgs.git
           pkgs.lazygit
           pkgs.mas
           pkgs.mkalias
+          pkgs.neovim
           pkgs.oh-my-posh
           pkgs.pngpaste
           pkgs.thefuck
           pkgs.typst
-          pkgs.typst
-          pkgs.zsh-autosuggestions
-          pkgs.zsh-syntax-highlighting
+          pkgs.wget
+          # pkgs.zsh-autosuggestions
+          # pkgs.zsh-syntax-highlighting
           pkgs.zoxide
         ];
 
@@ -56,22 +57,11 @@
         enable = true;
       	brews =[
           # "bat"
-          # "bitwarden-cli"
-          # "eza"
+          "bitwarden-cli"
           "ffmpeg"
-          # "fzf"
-          # "git"
-          # "lazygit"
-          # "mas"
-          # "neovim"
           "node"
-          # "oh-my-posh"
-          # "pngpaste"
-          # "thefuck"
-          # "tmux"
-          # "zsh-autosuggestions"
-          # "zsh-syntax-highlighting"
-          # "zoxide"
+          "zsh-autosuggestions"
+          "zsh-syntax-highlighting"
         ];
     	  casks =[
           "arc"
