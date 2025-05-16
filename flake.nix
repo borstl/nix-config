@@ -66,6 +66,7 @@
           "ffmpeg"
           "java"
           "julia"
+          "luarocks"
           "node"
           "rust"
           "zsh-autosuggestions"
