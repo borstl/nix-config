@@ -41,9 +41,7 @@
           pkgs.fzf
           pkgs.git
           pkgs.go
-          pkgs.lua
           pkgs.lazygit
-          pkgs.luarocks
           pkgs.mas
           pkgs.mkalias
           pkgs.neovim
