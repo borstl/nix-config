@@ -20,6 +20,7 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
   let
     configuration = { pkgs, config, ... }: {
+      system.primaryUser = "sebastianbecker";
       nixpkgs.config.allowUnfree = true;
 
       # NOTE
@@ -36,23 +37,27 @@
       environment.systemPackages = [
           pkgs.bat
           # pkgs.bitwarden-cli
+          pkgs.du-dust
           pkgs.eza
           pkgs.fd
           pkgs.fzf
           pkgs.git
           pkgs.go
+          pkgs.kitty
           pkgs.lazygit
           pkgs.mas
           pkgs.mkalias
           pkgs.neovim
           pkgs.oh-my-posh
+          pkgs.pay-respects
           pkgs.php
           pkgs.pngpaste
           pkgs.ripgrep
-          pkgs.thefuck
+          pkgs.tmux
           pkgs.tree-sitter
           pkgs.typst
           pkgs.wget
+          pkgs.wiki-tui
           # pkgs.zsh-autosuggestions
           # pkgs.zsh-syntax-highlighting
           pkgs.zoxide
@@ -68,6 +73,8 @@
           "julia"
           "luarocks"
           "node"
+          "pyenv"
+          "pyenv-virtualenv"
           "rust"
           "zsh-autosuggestions"
           "zsh-syntax-highlighting"
@@ -77,8 +84,8 @@
           "docker"
           "cleanmymac"
           # "ea"
-          "font-maple-mono" # beautiful, but has no nerd-fonts compatibility
           "forklift"
+          "ghostty"
           "iterm2"
           "inkscape"
           "inkstitch"
@@ -86,12 +93,12 @@
           "karabiner-elements"
           "lookaway"
           "logi-options+"
+          "lunar"
           "mactex"
           "makemkv"
           # "microsoft-edge"
           "microsoft-teams"
           "mkvtoolnix" # needs Rosetta2
-          "monitorcontrol"
           "obsidian"
           "plex"
           "prusaslicer"
@@ -133,6 +140,13 @@
       fonts.packages = with pkgs; [ 
         nerd-fonts.jetbrains-mono
         nerd-fonts.fira-code
+        # Maple Mono (Ligature TTF unhinted)
+        maple-mono.truetype
+        # Maple Mono NF (Ligature unhinted)
+        maple-mono.NF-unhinted
+        # Maple Mono NF CN (Ligature unhinted)
+        maple-mono.NF-CN-unhinted
+ 
       ];
 
       # System defaults: 
@@ -157,7 +171,7 @@
       	    "/System/Applications/Reminders.app"
       	    "/Applications/Obsidian.app"
             "/Applications/Zotero.app"
-            "/Applications/iTerm.app"
+            "/Applications/Ghostty.app"
       	    "/System/Applications/Music.app"
       	    "/System/Applications/System Settings.app"
           ];
