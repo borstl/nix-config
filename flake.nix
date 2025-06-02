@@ -41,7 +41,6 @@
           pkgs.eza
           pkgs.fd
           pkgs.fzf
-          pkgs.ghostty
           pkgs.git
           pkgs.go
           pkgs.lazygit
@@ -84,6 +83,7 @@
           "cleanmymac"
           # "ea"
           # "forklift" # No license for >4.3
+          "ghostty"
           "inkscape"
           "inkstitch"
           "jetbrains-toolbox"
