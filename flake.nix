@@ -62,7 +62,6 @@
           # pkgs.zsh-syntax-highlighting
           pkgs.zoxide
         ];
-
       homebrew ={
         enable = true;
       	brews =[
@@ -127,6 +126,7 @@
           "Microsoft Excel"= 462058435;
           "Numbers"= 409203825;
           "One Sec"= 1532875441;
+          "Perplexity" = 6714467650;
           "PDF Expert"= 1055273043;
           "Social Focus"= 1661093205;
           "Vimlike"= 1584519802;
