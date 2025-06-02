@@ -83,7 +83,7 @@
           "docker"
           "cleanmymac"
           # "ea"
-          "forklift"
+          # "forklift" # No license for >4.3
           "ghostty"
           "iterm2"
           "inkscape"
